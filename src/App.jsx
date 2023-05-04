@@ -1,7 +1,7 @@
-import { FeedbackOptions } from 'components/FeedbackOptions.jsx/FeedbackOptions';
-import { GlobalStyle } from 'components/GlobalStyle';
-import { Statistics } from 'components/Statistics/Statistics';
 import { Component } from 'react';
+import { GlobalStyle } from 'components/GlobalStyle';
+import { Feedback } from 'components/Feedback/Feedback';
+import { Statistics } from 'components/Statistics/Statistics';
 
 export class App extends Component {
   state = {
@@ -15,7 +15,7 @@ export class App extends Component {
         <GlobalStyle />
         <section>
           <h2>Please leave Feedback</h2>
-          <FeedbackOptions />
+          <Feedback />
           <h3>Statistics</h3>
           <Statistics />
         </section>
