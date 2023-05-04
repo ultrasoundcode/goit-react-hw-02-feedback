@@ -1,4 +1,4 @@
-export const FeedbackOptions = () => {
+export const Feedback = () => {
   return (
     <ul>
       <li>
