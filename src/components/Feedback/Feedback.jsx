@@ -1,15 +1,18 @@
-export const Feedback = () => {
+import PropTypes from 'prop-types';
+import { List, ListItem, Button } from './FeedBack.styled';
+
+export const Feedback = ({ options, onLeaveFeedback }) => {
   return (
-    <ul>
-      <li>
-        <button>Good</button>
-      </li>
-      <li>
-        <button>Neutral</button>
-      </li>
-      <li>
-        <button>Bad</button>
-      </li>
-    </ul>
+    <List>
+      {options.map((option, index) => (
+        <ListItem key={index}>
+          <Button onClick={() => onLeaveFeedback(option)}>{option}</Button>
+        </ListItem>
+      ))}
+    </List>
   );
+};
+
+Feedback.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
